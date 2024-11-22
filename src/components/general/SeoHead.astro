@@ -1,0 +1,40 @@
+---
+import config from '../../config.mjs';
+
+const { postData } = Astro.props;
+
+// Base metadata
+const baseTitle = "Jenn Junod | Full Stack Developer & Developer Advocate";
+const baseDescription = "I specialize in making technology human — enabling developers to understand, adopt, and adore technical products.";
+const baseImage = "https://opengraph.b-cdn.net/production/images/472241ee-3726-4492-b73b-976b50e8b0f1.jpg?token=33NiEpv5gmrrJBx8qHOX-pQ3Z9PA1Y7acKgzrGZXDRE&height=438&width=491&expires=33268139322";
+const baseUrl = "https://jennjunod.dev";
+
+// Dynamic values (fallback to base values if not provided)
+const title = postData?.data?.title ? postData.data.title : baseTitle;
+const description = postData?.data?.description ? postData.data.description : baseDescription;
+const image = postData?.data?.image ? postData.data.image : baseImage;
+const url = new URL(Astro.url.pathname, baseUrl).toString();
+---
+
+<!-- HTML Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={description}>
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content={url}>
+<meta property="og:type" content="website">
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:image" content={image}>
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="jennjunod.dev">
+<meta property="twitter:url" content={url}>
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={image}>
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

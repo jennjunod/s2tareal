@@ -1,0 +1,97 @@
+---
+title: "Recap and Rambles 1"
+pubDate: 2024-10-21
+intro: I learn, I write, I share
+tag: Recaps
+author: junod
+image: ../../assets/blog/recap1.png
+---
+
+# Recap and rambles of last week #1
+
+I have the urge to overthink this blog to prevent myself from posting it. My thoughts start with, what do I name such a blog? It’s not entirely just Teach Jenn Tech, nor Shit2TalkAbout. I want to write about lessons learned last week. Start taking the lessons I’ve learned and share my gratitude with all of the beautiful humans of the world. 
+
+## Lesson 1: Starting something is the scariest part of the process. 
+
+As I said before, I have a knack for overthinking the process to prevent myself from starting. This week's overthink was the fact that I’m unemployed and should have a shit ton of time on my hands, so therefore creating videos, blogs, shorts, and livestreaming will be EASY on top of looking for a job, interviewing, and networking. Oh wait, there’s also taking my father-in-law to all of his doctor's appointments and running errands. Last week, I didn’t get a chance to catch up on any video games until today, SUNDAY! 😫
+
+
+If I put enough pressure on myself with having too much to do and not enough time to be creative or tell myself I’m not smart enough to think of witty videos to be an overnight success, then there’s no fear of what other will think. 
+
+Adding to it, if I tell myself that teachjenntech.com, shit2talkabout.com, and jennjunod.com all need to be completed to do all of this, I will infact, NEVER need to share any of this with the world. 
+
+Bringing it back around, I’m starting. I’ve given myself all the excuses in the world and there will always be more excuses waiting. What’s stopping you from starting your next thing?
+
+## Lesson 2: Databases are hard and I FINALLY figured out how to put one of my shows into a database! 
+
+With recent changes in my life, I am working on cutting expenses. Hello [Astro](https://astro.build/) goodbye SquareSpace for shit2talkabout.com (new site not published yet). 
+
+While working on setting up this [Accessible Astro theme](https://astro.build/themes/details/accessible-astro-starter/), I was determined to get the show’s episode in a database. You know, episode number, title, quote, podcast embed, and transcript. Oy vey. ChatGPT and I went through the rounds trying to figure out what I wanted to do, but we got there! 
+
+The episode details are there! 
+
+![Image showing blog title, date, podcast embed, podcast quote, and transcript](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cpnsfcn3h5zaw848txhj.png)
+
+
+I was suggested to use [Turso](https://docs.turso.tech/introduction), which ended up being really cool. Thank you, humans, in the Astro Discord! 
+I liked using Turso after the initial setup; it was really easy to create a table within the database using Drizzle 
+
+![image showing the turso UI and where to click into Drizzle to edit the database](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pktltvars65tass2rvtx.png)
+
+And then adding records from drizzle too 
+
+![Image of a database view with test information for the ID, Title, Description, date, quote, transcript, episode embed, and episode image](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rlloulkgsr89p1zbvajf.png)
+
+[Turso & Astro](https://docs.turso.tech/sdk/ts/guides/astro) work well together 🤩
+
+Major wins that I was stuck on for a while were how to fix the dates since I write them differently so often: 
+
+```
+// Format the date consistently (e.g., "April 25, 2024")
+const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+```
+And how to use the episode number as the post title for the url which I used as part of the API 
+
+```
+export async function getStaticPaths() {
+  const posts = await fetchPosts();
+
+  return posts.map((post) => {
+    return {
+      params: { post: post.id.toLowerCase() }, // Use `id` for the URL path
+      props: { post },
+    };
+  });
+}
+```
+
+Repo if you’re curious: [https://github.com/jennjunod/s2ta](https://github.com/jennjunod/s2ta)
+
+## Lesson 3: It’s good to network even when I want to close in on myself and hermit. 
+
+Among the dr appts, hacking on websites, and applying for jobs, there were coffee chats. As emotionally draining the week had been, these coffee chats filled my cup and helped me also think of new ideas. 
+
+Like [Angie](https://www.linkedin.com/in/webchick/) is the best to info dump on 😅 I love when she says “So if I’m hearing you right it sounds like…” and she takes my scatter brain to one sentence. It’s amazing how good she is at that.  If you’re curious, Angie helped me realize how much I appreciate the good AI has done for my own accessibility. 
+
+I would highly recommend [Yurii](https://www.linkedin.com/in/yurii-lazaruk-community-consultant/)'s Between Two Watercoolers on fridays! The song I added to the playlist was the confidence booster everyone needs after getting laid off! 💯
+
+“[I am by Baby Tate](https://youtu.be/WL1XNyTSPfk?si=2DI55HyJI7vYeN_R)”
+
+Catching up with others has helped me not feel so alone, especially since becoming unemployed. It’s been a struggle to be open about wanting help yet there are so many that want to see me win, and thank you. They, me, we, want to see you win too! 
+
+## Lesson 4: Planning the next day helped me accomplish my goals. 
+
+Every night while my fiance is playing Madden, I tell him what’s on my list for the next day as I write it down. It makes the next day seem much more manageable.  
+
+The piece that was so effective for me to see was what I was moving from each day to the next, avoiding it. You may have guessed it, other than laundry, I hate laundry, it was telling myself to create videos, blogs, shorts, and live streaming will be EASY. It wasn’t easy for me. I’m scared, drawing blanks, and posting this to get started. Content is a lot of work. Putting myself out there again is hard. 
+
+But as I told my friends at the gym, I’m going through my post breakup glow up since I got dumped from my job. It’s time to level up and see what I can do. 
+
+Four lessons last week and realizing there is even more I could add about how CSS and I will EVENTUALLY be friends, I’m not sure when but we will. 
+
+So I’m curious, what’s one lesson you learned last week?
