@@ -2,10 +2,10 @@ export default {
     title: "Shit2TalkAbout",
     titleSuffix: "",
     description: "Solve your curiosity and learn from others conversations",
-    defaultOgImage:"https://opengraph.b-cdn.net/production/images/27abbd00-070b-41a8-ac46-ffb3828e814e.png?token=-KWeYREtv29NZD5RgnectRQkCq4iY58nyOGhcjs-RM0&height=716&width=915&expires=33268315468",
+    defaultOgImage:"https://opengraph.b-cdn.net/production/images/57bd4d60-8ba6-4a63-b0a3-9f153cde1438.png?token=fkrzbw8g0x2HiqO8oPlNYij55zj9ADpLl85S3xAsuhA&height=1200&width=1200&expires=33269002330",
         latestPosts: 3, 
     postsPerPage: 3,
-    url: "https://jennjunod.dev",
+    url: "https://shit2talkabout.com",
     social: {
         'dribbble': false,
         'facebook': 'https://www.facebook.com/shit2talkabout',
