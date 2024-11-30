@@ -15,11 +15,11 @@ module.exports = {
 				'pacamara-space': ['"Space Grotesk"', 'sans-serif'],
 			},
 			colors: {
-				'pacamara-primary': '#1B4332',
-				'pacamara-secondary': '#2D6A4F',
-				'pacamara-accent': '#40916C',
-				'pacamara-dark': '#081C15',
-				'pacamara-white': '#F0F4F1'
+				'pacamara-primary': '#7f2fa3',
+				'pacamara-secondary': '#ba2bba',
+				'pacamara-accent': '#03b9a8',
+				'pacamara-dark': '#000000',
+				'pacamara-white': '#f7f5eb'
 			  },
 			aspectRatio: {
 				'9/10': '9 / 16',
