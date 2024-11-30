@@ -11,6 +11,14 @@ const posts = (await getCollection('blog', ({ data }) => {
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   ).slice(0, postLimit);
 ---
+
+<div class="flex flex-col space-y-3 container mx-auto max-w-screen-xl px-7 py-10 lg:min-h-[500px] font-pacamara prose lg:prose-xl prose-headings:font-pacamara-space prose-headings:mt-5 prose-headings:text-pacamara-dark prose-headings:font-bold lg:prose-h1:text-7xl prose-h1:mt-0 prose-heading:transition-all prose-heading:duration-300 prose-p:text-pacamara-primary/50 dark:prose-p:text-white/70 prose-p:mb-0 prose-p:transition-all prose-p:duration-300 prose-img:mt-0 prose-img:mb-0 dark:prose-headings:text-white">
+  <h2 class="text-4xl font-bold mb-0">
+      <span class="gradient-underline">
+          <span>Past Episodes</span>
+      </span>
+      </h2>
+ 
 <section class="container mx-auto max-w-screen-lg px-7 py-10 mb-10">
     {
         posts.map((post, index) => {
