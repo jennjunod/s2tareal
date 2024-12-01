@@ -4,37 +4,38 @@ import logoImage from '../../assets/shit2talkabout.png';
 ---
 
 <section class="container flex flex-col mx-auto max-w-screen-xl px-7 py-16">
-<div class="flex items-center gap-12 max-w-3xl mx-auto">
-    <Image 
-        src={logoImage} 
-        width={400} 
-        alt="Shit2TalkAbout Logo" 
-        loading="eager" 
-        decoding="sync" 
-        class="relative w-[400px] rounded-[15px]"  
-    />
-</div>
+    <div class="flex items-center gap-12 max-w-3xl mx-auto">
+        <Image 
+            src={logoImage} 
+            width={400} 
+            alt="Shit2TalkAbout Logo" 
+            loading="eager" 
+            decoding="sync" 
+            class="relative w-full max-w-[400px] rounded-[15px]"  
+        />
+    </div>
 
-<div class="flex gap-4 justify-center mt-4">
-    <h2 class="text-black dark:text-[#f7f5eb] text-4xl font-bold mb-0">
-                        <span>Where to listen</span>
-            </span>
-            </h2>
-    <p class=""></p>
-    <a href="https://open.spotify.com/show/0usVIZAlnSrgh1jkkxj7CE?si=c3e163b2b5124db2" target="_blank" rel="noopener noreferrer">
-        <button class="bg-[#7f2fa3] hover:bg-[#ba2bba] text-[#f7f5eb] font-bold py-2 px-4 rounded-full">
-            Spotify
-        </button>
-    </a>
-    <a href="https://podcasts.apple.com/us/podcast/sh-t-you-dont-want-to-talk-about/id1588598391" target="_blank" rel="noopener noreferrer">
-        <button class="bg-[#ba2bba] hover:bg-[#7f2fa3] text-[#f7f5eb] font-bold py-2 px-4 rounded-full">
-            Apple Podcast
-        </button>
-    </a>
-    <a href="https://www.youtube.com/@shit2talkabout" target="_blank" rel="noopener noreferrer">
-        <button class="bg-[#03b9a8] hover:bg-[#ba2bba] text-[#f7f5eb] font-bold py-2 px-4 rounded-full">
-            YouTube
-        </button>
-    </a>
-</div>
+    <div class="flex flex-col items-center mt-8 gap-6">
+        <h2 class="text-black dark:text-[#f7f5eb] text-4xl font-bold text-center">
+            Where to listen
+        </h2>
+        
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://open.spotify.com/show/0usVIZAlnSrgh1jkkxj7CE?si=c3e163b2b5124db2" target="_blank" rel="noopener noreferrer">
+                <button class="bg-[#7f2fa3] hover:bg-[#ba2bba] text-[#f7f5eb] font-bold py-2 px-6 rounded-full w-full min-w-[140px]">
+                    Spotify
+                </button>
+            </a>
+            <a href="https://podcasts.apple.com/us/podcast/sh-t-you-dont-want-to-talk-about/id1588598391" target="_blank" rel="noopener noreferrer">
+                <button class="bg-[#ba2bba] hover:bg-[#7f2fa3] text-[#f7f5eb] font-bold py-2 px-6 rounded-full w-full min-w-[140px]">
+                    Apple Podcast
+                </button>
+            </a>
+            <a href="https://www.youtube.com/@shit2talkabout" target="_blank" rel="noopener noreferrer">
+                <button class="bg-[#03b9a8] hover:bg-[#ba2bba] text-[#f7f5eb] font-bold py-2 px-6 rounded-full w-full min-w-[140px]">
+                    YouTube
+                </button>
+            </a>
+        </div>
+    </div>
 </section>
