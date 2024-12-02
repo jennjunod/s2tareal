@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import Post from "./Post.astro";
 import config from "../../config.mjs";
 
-const { postLimit = 5, skipPost = "" } = Astro.props;
+const { postLimit = 3, skipPost = "" } = Astro.props;
 
 const posts = (await getCollection('blog', ({ data }) => {
   return !(data.title == skipPost);
@@ -30,4 +30,11 @@ const posts = (await getCollection('blog', ({ data }) => {
       })
     }
   </section>
+  <div class="flex justify-center">  <a href="/blog" target="_blank" rel="noopener noreferrer">
+    <button class="bg-[#ba2bba] hover:bg-[#7f2fa3] text-[#f7f5eb] font-bold place-content-center py-2 px-6 rounded-full  min-w-[140px]">
+        More Episodes
+    </button>
+  </div>
+
 </div>
+
